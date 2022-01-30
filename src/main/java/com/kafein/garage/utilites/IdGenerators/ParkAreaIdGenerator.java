@@ -1,6 +1,6 @@
-package com.kafein.garage.utilites;
+package com.kafein.garage.utilites.IdGenerators;
 
-public class ParkAreaIdGenerator extends IdGenerator {
+public class ParkAreaIdGenerator extends IdGeneratorBase implements IIdGenerator {
 
     private static ParkAreaIdGenerator instance;
 

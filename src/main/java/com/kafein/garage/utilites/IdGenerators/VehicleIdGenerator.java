@@ -1,12 +1,8 @@
-package com.kafein.garage.utilites;
+package com.kafein.garage.utilites.IdGenerators;
 
-public class VehicleIdGenerator extends IdGenerator {
+public class VehicleIdGenerator extends IdGeneratorBase implements IIdGenerator {
     private static VehicleIdGenerator instance;
-
-    private VehicleIdGenerator(){}
-
     public static VehicleIdGenerator getInstance(){
-
         if(instance == null) {
             synchronized (VehicleIdGenerator.class) {
                 if (instance == null) {

@@ -8,11 +8,10 @@ public class Vehicle extends BaseEntity {
     private Color color;
     private String plate;
 
-    public Vehicle(VehicleType vehicleType, Color color, String plate, Long id) {
+    public Vehicle(VehicleType vehicleType, Color color, String plate) {
         this.vehicleType = vehicleType;
         this.color = color;
         this.plate = plate;
-        this.id = id;
     }
 
     public Vehicle() {

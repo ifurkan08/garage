@@ -1,11 +1,11 @@
-package com.kafein.garage.utilites;
+package com.kafein.garage.utilites.IdGenerators;
 
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class IdGenerator {
+public class IdGeneratorBase {
     private AtomicLong atomicCounter ;
-    IdGenerator(){
+    IdGeneratorBase(){
         atomicCounter = new AtomicLong();
     }
     public Long createId() {

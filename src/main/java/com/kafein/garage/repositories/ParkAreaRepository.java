@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public  class ParkAreaRepository extends RepositoryBase<ParkArea> {
+    private ParkAreaRepository(){
+
+    }
     private static ParkAreaRepository instance;
     public static ParkAreaRepository getInstance(){
         if(instance == null) {

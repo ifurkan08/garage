@@ -5,11 +5,10 @@ public class VehiclePosition extends BaseEntity {
     private Vehicle vehicle;
     private Integer position;
 
-    public VehiclePosition(ParkArea parkArea, Vehicle vehicle, Integer position,Long id) {
+    public VehiclePosition(ParkArea parkArea, Vehicle vehicle, Integer position) {
         this.parkArea = parkArea;
         this.vehicle = vehicle;
         this.position = position;
-        this.id = id;
     }
 
     public VehiclePosition() {

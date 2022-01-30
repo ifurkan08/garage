@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VehiclePositionRepository extends RepositoryBase<VehiclePosition> {
+    private VehiclePositionRepository(){
+
+    }
     private static VehiclePositionRepository instance;
     public static VehiclePositionRepository getInstance(){
         if(instance == null) {
