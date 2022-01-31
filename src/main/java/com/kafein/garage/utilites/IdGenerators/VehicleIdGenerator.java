@@ -13,8 +13,4 @@ public class VehicleIdGenerator extends IdGeneratorBase implements IIdGenerator 
 
         return instance;
     }
-
-    public Long getId() {
-        return createId();
-    }
 }

@@ -1,6 +1,7 @@
 package com.kafein.garage.repositories;
 
 import com.kafein.garage.model.entity.BaseEntity;
+import com.kafein.garage.model.entity.VehiclePosition;
 import com.kafein.garage.utilites.IdGenerators.IIdGenerator;
 import com.kafein.garage.utilites.IdGenerators.IdGenerator;
 
@@ -8,12 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryBase<T extends BaseEntity> {
-    private List<T> list = new ArrayList<>();
+    protected List<T> list = new ArrayList<>();
 
-    public void add(T obj) {
+    public T add(T obj) {
         IIdGenerator iIdGenerator = IdGenerator.getInstance().getGenerator(obj.getClass());
         obj.setId(iIdGenerator.createId());
         list.add(obj);
+        return obj;
     }
 
     public T getById(Long id) {
@@ -22,5 +24,10 @@ public class RepositoryBase<T extends BaseEntity> {
 
     public List<T> getAll() {
         return list;
+    }
+
+    public void update(T updated) {
+        list.removeIf(x -> x.getId().equals(updated.getId()));
+        list.add(updated);
     }
 }

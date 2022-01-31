@@ -1,5 +1,7 @@
 package com.kafein.garage.utilites.IdGenerators;
 
+import com.kafein.garage.repositories.VehiclePositionRepository;
+
 public class VehiclePositionIdGenerator extends IdGeneratorBase implements IIdGenerator {
     private static VehiclePositionIdGenerator instance;
 
@@ -14,9 +16,5 @@ public class VehiclePositionIdGenerator extends IdGeneratorBase implements IIdGe
             }
         }
         return instance;
-    }
-
-    public Long getId() {
-        return createId();
     }
 }
